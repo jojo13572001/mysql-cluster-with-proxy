@@ -6,6 +6,7 @@ Pleae refer to example_run.sh
 
 #Step
 1.  create two manamgent node
+
     go to you first management node 172.31.13.64
        bash start_node.sh -mgmd 1 2 2 1 172.31.13.64 172.31.1.232 172.31.15.42 172.31.14.144 172.31.2.226
     go to your second management node 172.31.1.232
