@@ -1,5 +1,5 @@
 # Instruction
-A dockerized mysql cluster with mysql proxy support
+A dockerized mysql cluster with mysql proxy
 
 #Usage
 You can refer to example_run.sh directly or follow the Cluster Setup bellow
