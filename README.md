@@ -25,7 +25,7 @@ You can refer to example_run.sh directly or follow the Cluster Setup bellow
     
     bash start_node.sh -data 0 172.31.13.64
        
-3.  Create one sql node
+3.  Create one sql node and take one management node as your argument
 
     3.1   Go to you sql node 172.31.2.226
        
