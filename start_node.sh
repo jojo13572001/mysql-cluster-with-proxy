@@ -5,11 +5,11 @@ if [ $# -eq 0 ]; then
     exit
 fi
 
-callMysqlAddress ()
-{
-        echo $(curl -sb -H "Accept: application/json" "http://$2:8500/v1/catalog/service/mysql-cluster") \
-        | (jq -r ".[] | select(.ServiceID | contains(\"registrator:$1:1186\"))")
-}
+#callMysqlAddress ()
+#{
+#        echo $(curl -sb -H "Accept: application/json" "http://$2:8500/v1/catalog/service/mysql-cluster") \
+#        | (jq -r ".[] | select(.ServiceID | contains(\"registrator:$1:1186\"))")
+#}
 
 ETH0IP=$(/sbin/ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}')
 MYSQL_PASSWORD="'1234567'"
@@ -48,8 +48,9 @@ elif [ "$1" == "-data" ] && [ $# -eq 3 ]; then
         	docker rm -f mysql_data${i}
 	done
 	
-	MGMD=$(callMysqlAddress mysql_mgmd0 $3)
-	MGMIP=$(echo ${MGMD} | jq -r '.ServiceAddress')
+	#MGMD=$(callMysqlAddress mysql_mgmd0 $3)
+	#MGMIP=$(echo ${MGMD} | jq -r '.ServiceAddress')
+	MGMIP=$3
 	echo "retrieve ${MGMD} mgmd ip ${MGMIP}"
 	echo "generate config for data node"
 	docker run -i --rm -w /sqlTmpl -v $(pwd)/mysql/sqlTmpl:/sqlTmpl:ro -v $(pwd)/mysql/config:/config \
@@ -67,8 +68,9 @@ elif [ "$1" == "-sql" ] && [ $# -eq 3 ]; then
         	docker kill mysql_sql${i}
         	docker rm -f mysql_sql${i}
 	done
-	MGMD=$(callMysqlAddress mysql_mgmd0 $3)
-	MGMIP=$(echo ${MGMD} | jq -r '.ServiceAddress')
+	#MGMD=$(callMysqlAddress mysql_mgmd0 $3)
+	#MGMIP=$(echo ${MGMD} | jq -r '.ServiceAddress')
+	MGMIP=$3
 	echo "retrieve ${MGMD} mgmd ip ${MGMIP}"
 	echo "generate config for data node"
 	docker run -i --rm -w /sqlTmpl -v $(pwd)/mysql/sqlTmpl:/sqlTmpl:ro -v $(pwd)/mysql/config:/config \
