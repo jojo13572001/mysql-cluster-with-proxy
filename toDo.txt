@@ -1,0 +1,1 @@
+ndb-connectstring in my.cnf should include all management nodes
