@@ -2,9 +2,9 @@
 A dockerized mysql cluster with mysql proxy support
 
 #Usage
-You can refer to example_run.sh directly or follow the installation bellow
+You can refer to example_run.sh directly or follow the Cluster Setup bellow
 
-#Installation
+#Cluster Setup
 1.  Create two manamgent node
     
     1.1   Go to you first management node 172.31.13.64
@@ -29,8 +29,10 @@ You can refer to example_run.sh directly or follow the installation bellow
 
     3.1   Go to you sql node 172.31.2.226
        
-    bash start_node.sh -sql 0 172.31.13.64
-    
+    bash start_node.sh -sql 0 172.31.13.6
+
+#Proxy Setup
+
 #Reference
   http://jaychung.tw/2015/09/12/mysql-cluster-deployment/
   
