@@ -44,7 +44,11 @@ You can refer to example_run.sh directly or follow the Cluster Setup bellow
 
     [If you have more than one sql node, you should append it in the tail, ex bash run.sh sql_ip1 sql_ip2 sql_ip3]
 
+#Usage
+   Now you can use root/1234567 to login mysql proxy or through sql nodes.
+
 #Reference
   http://jaychung.tw/2015/09/12/mysql-cluster-deployment/
   
   https://github.com/g17/MySQL-Cluster
+
