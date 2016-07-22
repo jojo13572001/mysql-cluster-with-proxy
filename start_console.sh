@@ -1,17 +1,18 @@
 #!/bin/bash
 if [ $# -ne 1 ]; then
-    echo "Arguments Wrong, it should be master's ip"
+    echo "Arguments Wrong, it should be mgmd's ip"
     exit
 fi
 
-callMysqlAddress ()
-{
-        echo $(curl -sb -H "Accept: application/json" "http://$2:8500/v1/catalog/service/mysql-cluster") \
-        | (jq -r ".[] | select(.ServiceID | contains(\"registrator:$1:1186\"))")
-}
+#callMysqlAddress ()
+#{
+#        echo $(curl -sb -H "Accept: application/json" "http://$2:8500/v1/catalog/service/mysql-cluster") \
+#        | (jq -r ".[] | select(.ServiceID | contains(\"registrator:$1:1186\"))")
+#}
 
-MGMD=$(callMysqlAddress mysql_mgmd0 $1)
-MGMIP=$(echo ${MGMD} | jq -r '.ServiceAddress')
+#MGMD=$(callMysqlAddress mysql_mgmd0 $1)
+#MGMIP=$(echo ${MGMD} | jq -r '.ServiceAddress')
+MGMIP=$1
 echo "management node's ip ${MGMIP}"
 docker build -t jojo13572001/mysql-cluster mysql
 

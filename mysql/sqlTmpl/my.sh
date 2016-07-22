@@ -13,11 +13,6 @@ cat  << EOF
 [MYSQLD]
 ndbcluster                     
 ndb-connectstring=${MGMIP} 
-default-storage-engine=NDBCLUSTER
-skip-character-set-client-handshake
-character-set-server = utf8
-collation-server = utf8_general_ci
-init-connect = SET NAMES utf8
 EOF
 
 # Options for ndbd process:

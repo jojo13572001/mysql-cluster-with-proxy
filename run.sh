@@ -8,7 +8,7 @@ if [ $# -ne 1 ]; then
 fi
 
 if [ "$1" == "-mgmd" ]; then
-	bash start_node.sh -mgmd 0 1 2 1 172.31.0.13 172.31.15.42 172.31.14.144 172.31.2.226
+	bash start_node.sh -mgmd 0 2 2 1 172.31.13.64 172.31.1.232 172.31.15.42 172.31.14.144 172.31.2.226
 	#bash start_node.sh -mgmd 0 1 2 1 ${ETH0IP} ${ETH0IP} ${ETH0IP} ${ETH0IP} 
 elif [ "$1" == "-data0" ]; then
 	bash start_node.sh -data 0 172.31.0.13 
