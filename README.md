@@ -41,7 +41,8 @@ You can refer to example_run.sh directly or follow the Cluster Setup bellow
 
       bash run.sh 172.31.2.226
       
-    If you have more than one sql node, you should append it in the tail, ex bash run.sh sql_ip1 sql_ip2 sql_ip3
+
+    [If you have more than one sql node, you should append it in the tail, ex bash run.sh sql_ip1 sql_ip2 sql_ip3]
 
 #Reference
   http://jaychung.tw/2015/09/12/mysql-cluster-deployment/
