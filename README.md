@@ -21,7 +21,7 @@ You can refer to example_run.sh directly or follow the Cluster Setup bellow
     
     bash start_node.sh -data 1 172.31.13.64
        
-    2.2   Go to your second data node 172.31.14.144 and take management node as your argument
+    2.2   Go to your second data node 172.31.14.144 and take one management node as your argument
     
     bash start_node.sh -data 0 172.31.13.64
        
@@ -32,6 +32,13 @@ You can refer to example_run.sh directly or follow the Cluster Setup bellow
     bash start_node.sh -sql 0 172.31.13.64
 
 #MySql Proxy Setup
+
+1. Create Mysql Proxy Server
+   1. Go to your proxy server 172.31.3.33 and and take sql nodes as your arguments
+   
+      cd proxy-server
+
+      bash run.sh 172.31.2.226 172.31.13.64 
 
 #Reference
   http://jaychung.tw/2015/09/12/mysql-cluster-deployment/
