@@ -1,4 +1,4 @@
-# Instruction
+# Instroduction
 A dockerized mysql cluster with mysql proxy
 
 #Usage
