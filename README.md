@@ -34,6 +34,7 @@ You can refer to example_run.sh directly or follow the Cluster Setup bellow
 #MySql Proxy Setup
 
 1. Create Mysql Proxy Server
+
    1.1 Go to your proxy server 172.31.3.33 and and take sql nodes as your arguments.
    
       cd proxy-server
