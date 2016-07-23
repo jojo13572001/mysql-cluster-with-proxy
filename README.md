@@ -46,7 +46,11 @@ You can refer to example_run.sh directly or follow the Cluster Setup bellow
 
 #TEST
    Now you can use root/1234567 to login mysql proxy or through sql nodes.
-
+   You can also type
+   
+   bash start_console.sh 172.31.13.64
+   
+   to get into management node and type "SHOW" to check if all the nodes are connected well.
 #Reference
   http://jaychung.tw/2015/09/12/mysql-cluster-deployment/
   
